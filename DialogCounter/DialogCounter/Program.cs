@@ -21,8 +21,8 @@ namespace DialogCounter
             {
                 Console.WriteLine("usage: DialogCounter filename.ink");
 
-                fileName = "/Users/tadej/elroy/wip-documents-art/elroy.ink";
-                //return;
+                //fileName = "/Users/tadej/elroy/wip-documents-art/elroy.ink";
+                return;
             }
             else
             {

@@ -1,0 +1,11 @@
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/bin/Debug/netcoreapp2.1/DialogCounter.deps.json
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/bin/Debug/netcoreapp2.1/DialogCounter.runtimeconfig.json
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/bin/Debug/netcoreapp2.1/DialogCounter.runtimeconfig.dev.json
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/bin/Debug/netcoreapp2.1/DialogCounter.dll
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/bin/Debug/netcoreapp2.1/DialogCounter.pdb
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/obj/Debug/netcoreapp2.1/DialogCounter.csprojAssemblyReference.cache
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/obj/Debug/netcoreapp2.1/DialogCounter.csproj.CoreCompileInputs.cache
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/obj/Debug/netcoreapp2.1/DialogCounter.AssemblyInfoInputs.cache
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/obj/Debug/netcoreapp2.1/DialogCounter.AssemblyInfo.cs
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/obj/Debug/netcoreapp2.1/DialogCounter.dll
+/Users/tadej/DialogCounter/DialogCounter/DialogCounter/obj/Debug/netcoreapp2.1/DialogCounter.pdb
