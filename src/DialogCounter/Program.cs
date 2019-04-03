@@ -12,15 +12,16 @@ namespace DialogCounter
 
         static void Main(string[] args)
         {
-            Console.WriteLine("DialogCounter (c) 2019 Tadej Gregorcic");
-            Console.WriteLine("Counts lines in the format");
-            Console.WriteLine("Speaker Name: Spoken Text");
+            Console.WriteLine("DialogCounter \ud83d\udde3️ 2019 Tadej Gregorcic");
+            Console.WriteLine("Counts dialog words and lines in the format:");
+            Console.WriteLine("Speaker Name: Spoken Text until endline");
+            Console.WriteLine("");
+
             string fileName = "";
 
             if (args.Length < 2)
             {
                 Console.WriteLine("usage: DialogCounter filename.ink");
-
                 //fileName = "/Users/tadej/elroy/wip-documents-art/elroy.ink";
                 return;
             }
