@@ -9,6 +9,7 @@ namespace DialogCounter
     {
         private static Hashtable words = new Hashtable();
         private static Hashtable lines = new Hashtable();
+        private static ArrayList includes = new ArrayList();
 
         static void Main(string[] args)
         {
@@ -22,7 +23,7 @@ namespace DialogCounter
             if (args.Length < 2)
             {
                 Console.WriteLine("usage: DialogCounter filename.ink");
-                //fileName = "/Users/tadej/elroy/wip-documents-art/elroy.ink";
+                //fileName = "/Users/tadej/elroy/wip-documents-art/Ink files/elroy.ink";
                 return;
             }
             else
@@ -30,9 +31,45 @@ namespace DialogCounter
                 fileName = args[1];
             }
 
-            CountLines(fileName, out int totalLines, out int totalWords);
+            var fileNames = "";
 
-            DisplayResults(fileName, totalLines, totalWords);
+            GetIncludes(fileName);
+
+            CountLines(fileName, out int totalLines, out int totalWords);
+            fileNames = fileName;
+
+            foreach(string include in includes)
+            {
+                fileNames += " " + include;
+                int tlines = 0;
+                int twords = 0;
+                CountLines(include, out tlines, out twords);
+                totalLines += tlines;
+                totalWords += twords;
+            }
+
+            DisplayResults(fileNames, totalLines, totalWords);
+        }
+
+        private static void GetIncludes(string fileName)
+        {
+            using (StreamReader reader = new StreamReader(fileName))
+            {
+                string line = "";
+
+                while ((line = reader.ReadLine()) != null)
+                {
+                    int i = line.IndexOf("INCLUDE");
+                    if (i!=-1)
+                    {
+                        int j = fileName.LastIndexOf(Path.DirectorySeparatorChar);
+
+                        string path = fileName.Substring(0, j+1);
+
+                        includes.Add(path + line.Replace("INCLUDE ", "").Trim());
+                    }
+                }
+            }
         }
 
         private static void DisplayResults(string fileName, int totalLines, int totalWords)
