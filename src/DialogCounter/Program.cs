@@ -23,8 +23,8 @@ namespace DialogCounter
             if (args.Length < 2)
             {
                 Console.WriteLine("usage: DialogCounter filename.ink");
-                //fileName = "/Users/tadej/elroy/wip-documents-art/Ink files/elroy.ink";
-                return;
+                fileName = @"c:\users\tadej\desktop\work\motiviti\elroy-script\elroy.ink";
+                //return;
             }
             else
             {
@@ -119,7 +119,12 @@ namespace DialogCounter
                     line = line.TrimStart('+');
                     line = line.TrimStart('*');
                     line = line.TrimStart('-');
-
+                    line = line.TrimStart('+');
+                    line = line.Replace("--", "").Replace("+++", "").Replace("---", "").Replace("+ -", "").Replace("+  ", "");
+                    line = line.Replace("- ", "");
+                    line = line.Replace("+  ", "");
+                    line = line.Replace("+ ", "");
+                    line = line.Trim();
                     line = Regex.Replace(line, @"\[.*\]", "");
                     line = Regex.Replace(line, @"\{.*\}", "");
 
@@ -129,6 +134,7 @@ namespace DialogCounter
                     string charName = line.Substring(0, colon).Trim();
                     string charLine = line.Substring(colon + 1).Replace(" ... ", "").Replace("... ", "").Trim();
 
+                    
                     int cntWords = words[charName] != null ? (int)words[charName] : 0;
                     int cntLines = lines[charName] != null ? (int)lines[charName] : 0;
 
